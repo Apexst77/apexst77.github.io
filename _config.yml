@@ -12,22 +12,22 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "default"
 
 # Site Settings
 locale                   : "ko-KR"
 title                    : "forStudy"
 title_separator          : "-"
-subtitle                 : "version 1.0"
+subtitle                 : "Study Reinforecement Learning, Unity, Python, etc"
 name                     : "김상민(Apexst77)"
 description              : "Study Reinforecement Learning, Unity, Python, etc"
 url                      : "https://apexst77.github.io"
 baseurl                  : # the subpath of your site, "/blog"
 repository               : "Apexst77/apexst77.github.io"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "Test"
-# breadcrumbs            : true # true, false (default)
+teaser                   : # "/assets/images/500x300.png"
+logo                     : # "/assets/images/88x88.png"
+masthead_title           : "forStudy"
+breadcrumbs            : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
@@ -94,8 +94,8 @@ analytics:
 # Site Author
 author:
   name             : "김상민(Apexst77)"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Student"
+  avatar           : "/assets/images/hansung.jpg"
+  bio              : "RL과 Unity 공부중인 학생입니다."
   location         : "Republic of Korea"
   email            : "Apexst77@gmail.com"
   links:
@@ -279,3 +279,11 @@ defaults:
       comments: # true
       share: true
       related: true
+
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
