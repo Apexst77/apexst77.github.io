@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: http://jinyongjeong.github.io/sitemap.xml
