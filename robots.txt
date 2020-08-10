@@ -1,3 +1,4 @@
-ser-agent: *
+User-agent: *
 Allow: /
-Sitemap: http://seongkyun.github.io/sitemap.xml
+
+Sitemap: http://jinyongjeong.github.io/sitemap.xml
