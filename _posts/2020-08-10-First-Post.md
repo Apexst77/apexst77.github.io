@@ -8,6 +8,3 @@ comments: true
 ```python
 print("First, Post!")
 ```
-
-
-
