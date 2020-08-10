@@ -11,7 +11,7 @@
 .bundle
 Gemfile.lock
 **/vendor/bundle
-
+._site
 # Node.js and NPM
 node_modules
 npm-debug.log*
