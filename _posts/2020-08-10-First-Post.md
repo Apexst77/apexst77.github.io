@@ -1,6 +1,7 @@
 ---
 title: "First, Post!"
 comments: true
+changefreq : week
 ---
 
 ## Hello!
