@@ -1,5 +1,5 @@
 ---
-title: "[RL]David Silver_RL-Course-1:intro-RL"
+title: "[RL]David Silver_RL-Lecture-1:intro-RL"
 categories: "Reinforcement_Learning"
 permalink: /RL/David_Silver/1/
 excerpt: "Course Review"
@@ -9,9 +9,10 @@ last_modified_at: 2020-08-11T08:46:01-05:00
 
 ## RL Course by David Silver : intro-RL
 
-![ppt_1]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-01.jpg){: width="70%" height="70%"}{: .align-center}
+![ppt_1]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-01.jpg){: width="80%" height="80%"}{: .align-center}
 
-Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#reinforcement-learning) - RL Course:David Silver 
+***
+**Contents : [[Reinforcement Learning]](https://apexst77.github.io/categories/#reinforcement-learning) - RL Course:David Silver**
 
 - [0] [UCL Course on RL](https://www.davidsilver.uk/teaching/)
 - [1] [intro-RL](https://apexst77.github.io/RL/David_Silver/1/)
@@ -25,6 +26,10 @@ Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#rei
 - [9] [Exploration and Exploitation](https://apexst77.github.io/RL/David_Silver/9/) 
 - [10] [Classic Games](https://apexst77.github.io/RL/David_Silver/10/) 
 
+***
+
+강의를 통해 공부한 내용을 바탕으로 최대한 자세히 정리할 예정이다.
 
 
-안녕 안녕 안녕
+
+![ppt_2]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-07.jpg){: width="50%" height="50%"}{: .align-center}
