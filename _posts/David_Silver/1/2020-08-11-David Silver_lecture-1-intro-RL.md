@@ -1,5 +1,5 @@
 ---
-title: "[RL]David Silver_RL-Course-1:intro-RL"
+title: "[RL]David Silver_RL-Course-1:intro-RL 안토"
 categories: "Reinforcement_Learning"
 permalink: /RL/David_Silver/1/
 excerpt: "Course Review"
