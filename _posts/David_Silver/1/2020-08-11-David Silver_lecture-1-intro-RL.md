@@ -9,7 +9,7 @@ last_modified_at: 2020-08-11T08:46:01-05:00
 
 ## RL Course by David Silver : intro-RL
 
-![ppt_1](https://apexst77.github.io/_posts/David_Silver/1/intro_RL-01.jpg)
+![ppt_1](https://apexst77.github.io/_posts/David_Silver/1/img/intro_RL-01.jpg)
 
 Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#reinforcement-learning) - RL Course:David Silver 
 
