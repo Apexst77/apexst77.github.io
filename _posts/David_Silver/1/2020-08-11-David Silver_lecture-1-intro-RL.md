@@ -9,6 +9,8 @@ last_modified_at: 2020-08-11T08:46:01-05:00
 
 ## RL Course by David Silver : intro-RL
 
+![ppt_1](img/intro_RL-01.jpg)
+
 Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#reinforcement-learning) - RL Course:David Silver 
 
 - [0] [UCL Course on RL](https://www.davidsilver.uk/teaching/)
@@ -23,5 +25,5 @@ Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#rei
 - [9] [Exploration and Exploitation](https://apexst77.github.io/RL/David_Silver/9/) 
 - [10] [Classic Games](https://apexst77.github.io/RL/David_Silver/10/) 
 
-![ppt_1](assets/images/1_DavidSilver_intro_RL/intro_RL-01.jpg)
+
 
