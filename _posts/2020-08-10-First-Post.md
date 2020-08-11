@@ -1,7 +1,8 @@
 ---
 title: "First, Post!"
 comments: true
-changefreq : week
+changefreq : day
+permalink: /First/
 ---
 
 ## Hello!
