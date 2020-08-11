@@ -7,7 +7,7 @@ changefreq : day
 last_modified_at: 2020-08-11T08:46:01-05:00
 ---
 
-## RL Course by David Silver : intro-RL
+## RL Course by David Silver : intro-RL 안로
 
 ![ppt_1](https://apexst77.github.io/_posts/David_Silver/1/img/intro_RL-01.jpg)
 
@@ -27,3 +27,4 @@ Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#rei
 
 
 
+안녕 안녕 안녕
