@@ -2,6 +2,7 @@
 title: "[RL]David Silver_RL-Lecture-1:intro-RL"
 categories: "David_Silver"
 tags: "Reinforcement_Learning"
+toc_sticky: False
 permalink: /RL/David_Silver/1/
 excerpt: "Course Review"
 changefreq : day
