@@ -364,7 +364,7 @@ Agent의 구성에 따라 크게 3가지로 나눌 수 있다.
 
 ------
 
-Categorizing RL agents(2)
+### Categorizing RL agents(2)
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-35.jpg){: width="90%" height="90%"}{: .align-center} 
 
@@ -373,7 +373,7 @@ Categorizing RL agents(2)
 
 ------
 
-RL Agent Taxonomy
+### RL Agent Taxonomy
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-36.jpg){: width="90%" height="90%"}{: .align-center} 
 
@@ -448,13 +448,13 @@ Explore가 Exploit보다 대체적으로 중요하다
 
 ------
 
-Examples of Exploration and Exploitation
+### Examples of Exploration and Exploitation
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-42.jpg){: width="90%" height="90%"}{: .align-center} 
 
 ------
 
-Prediction and Control
+### Prediction and Control
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-43.jpg){: width="90%" height="90%"}{: .align-center} 
 
@@ -470,7 +470,7 @@ Prediction and Control
 
 ------
 
-Gridworld Example
+### Gridworld Example
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-44.jpg){: width="90%" height="90%"}{: .align-center} 
 
@@ -505,7 +505,7 @@ Optimal Value Function의 표기가 약간 헷갈릴 수 있는데  V *라는 �
 
 ------
 
-Course Outline
+### Course Outline
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-46.jpg){: width="90%" height="90%"}{: .align-center} 
 
