@@ -78,7 +78,7 @@ changefreq : day
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-13.jpg){: width="90%" height="90%"}{: .align-center} 
 
-R_t는 Step t에서 얼마나 Agent가 잘 행동하고있는지를 나타낸다. Agent의 목적은 **Reward를 Maximize하는 것**이다.
+R(t)는 Step t에서 얼마나 Agent가 잘 행동하고있는지를 나타낸다. Agent의 목적은 **Reward를 Maximize하는 것**이다.
 
 Reward는 반드시 **Scalar**값이어야 한다.(Vector인자는 학습이 불가하다)
 
@@ -126,10 +126,10 @@ Reward는 **지연**될 수 있다: 지금의 Action이 바로 Reward에 영향�
 **강화학습의 핵심**
 
 - **Agent**
-- 다음 그림에서 뇌를 의미한다
+  - 다음 그림에서 뇌를 의미한다
   - **Action(A(t))**을 하는 주체
   - O(t), R(t)를 받아 A(t)를 행동한다
-  
+
 - **Environment**
 
   - 다음 그림에서 외부의 환경(지구)을 의미한다

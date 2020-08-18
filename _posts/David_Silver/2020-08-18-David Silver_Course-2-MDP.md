@@ -27,8 +27,7 @@ Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#rei
 
 ***
 
-강의를 통해 공부한 내용을 바탕으로 최대한 자세히 정리할 예정
-
 중요 단어는 모두 영어로 기록할 예정입니다.
 
 ------
+
