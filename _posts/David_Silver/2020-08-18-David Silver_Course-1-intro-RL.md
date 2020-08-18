@@ -68,7 +68,7 @@ changefreq : day
 - **Time really matters**: 시간이 중요하다!
   - Sequential data: 순서와 시간이 중요한 데이터
   - non i.i.d data: independent identically distributed(독립 동일 분포)가 아니다.
-  - i.i.d: 동일한 확률분포로 부터 뽑힌 확률 변수에 대하여 각각은 서로에게 독립적이다. 
+  - i.i.d: 동일한 확률분포로 부터 뽑힌 확률 변수 / 각각은 서로에게 독립적이다. 
 - **Agent's actions affect the subsequent data it receives**
   - Agent의 Action이 후의 데이터에 영향을 미친다.
 
@@ -508,6 +508,8 @@ Optimal Value Function의 표기가 약간 헷갈릴 수 있는데  V *라는 �
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-46.jpg){: width="90%" height="90%"}{: .align-center} 
 
 ------
+
+질문 및 피드백은 환영합니다
 
 ***End***
 
