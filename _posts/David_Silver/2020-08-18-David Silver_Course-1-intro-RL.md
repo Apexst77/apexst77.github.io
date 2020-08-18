@@ -36,6 +36,10 @@ changefreq : day
 
 ### Machine Learning
 
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-06.jpg){: width="90%" height="90%"}{: .align-center}
+
+------
+
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-07.jpg){: width="90%" height="90%"}{: .align-center}
 
 **Machine Learning**은 다음 세가지를 포함하는 개념이다.
@@ -183,7 +187,7 @@ Reward는 **지연**될 수 있다: 지금의 Action이 바로 Reward에 영향�
     - S(t)를 참고하여 S(t+1)로 State가 전이될 확률은 S(1:t)까지 State를 참고하여 S(t+1)로 State가 전이될 확률과 같다.
     - 즉 S(t)가 S(1:t)를 대표할만큼 충분한 information을 포함한다는 의미이다.
   - 아래 수식이 의미하는 것은 다음과 같다.
-    - Step t에 대하여 H(1:t)의 information을 S(t)가 representation(대표)하며 Only S(t)에 의존하여 (t+1) Step이후의 History가 모두 결정된다.
+    - Step t에 대하여 H(1:t)의 information을 S(t)가 대표하며 Only S(t)에 의존하여 (t+1) Step이후의 History가 모두 결정된다.
 
 Environment State와 History는 Definition에 의해 Markov State임이 자명하다.
 
@@ -221,7 +225,9 @@ Bell, Light, Lever, Lever의 신호가 주어졌을 때 **치즈(Reward)**를 �
 
 Agent State는 주로 Observation과 Reward의 함수이다.
 
-**Fully Obserable Environments**: Environment가 반환한 Observation이 Environment State 자체이고 Agent가 Environment State를 볼 수 있을 때(Agent State = Environment State = Observation 일 때) 이때의 Environment
+**Fully Obserable Environments**: Environment가 반환한 Observation이 Environment State 자체이고 Agent가 Environment State를 볼 수 있을 때의 Environment을 의미한다
+
+즉 Agent State = Environment State = Observation 일 때
 
 이러한 Process를 Markov decision process라고 하며 줄여서 MDP라고 부른다.
 
@@ -229,7 +235,7 @@ Agent State는 주로 Observation과 Reward의 함수이다.
 
 ------
 
-Partially Obsevable Environments
+### Partially Obsevable Environments
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-24.jpg){: width="90%" height="90%"}{: .align-center} 
 
@@ -245,14 +251,265 @@ POMDP에서는 위 PPT의 아랫내용과 같이 Agent State를 정하는 많은
 
 ------
 
-Major Component of an RL Agent
+### Major Component of an RL Agent
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-25.jpg){: width="90%" height="90%"}{: .align-center} 
 
 Reinforcement Learning
 
-- Policy
+- Policy(정책)
   - Agent가 행동을 결정하는 규칙
-  - A(t) = $${pie}$$(S(t)) 
 - Value
+  - 지금의 State 혹은 Action이 얼마나 좋은지를 판단하는 척도
 - Model
+  - Model을 통해 Agent가 Environment를 예측한다.
+
+------
+
+### Policy
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-26.jpg){: width="90%" height="90%"}{: .align-center} 
+
+**Peterministic Policy(결정적 정책)**: State가 주어지면 그에따라 Action이 1개로 결정
+
+**Stochastic Policy(확률적 정책)**: State가 주어지면 그에따라 Action이 확률적으로 결정
+
+------
+
+### Value Function
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-27.jpg){: width="90%" height="90%"}{: .align-center} 
+
+**Value Function**: 어떤 State로 이동하거나 Action을 할 때 **앞으로 받게될 총 보상**(Discounted Reward)의 기댓값
+
+- 좋은 State/Action 을 판단하는 지표가된다.
+- **Discounted Reward**: 하나의 Episode를 Sampling해보자.(Terminal State(종결)에 도달하기 까지 **Policy를 따라 움직인** 1개의 경로를 생각해보자) 이때 각 action마다의 보상이 존재할 것이다. 이러한 보상의 Sequence을 그대로 더할 수도 있겠지만 대부분의 RL에서는 현재의 보상이 미래의 보상보다 Valuable한 것으로 본다. 이를 위해 discount factor(γ)의 개념을 도입하였다.
+  - discount factor(γ)을 적용하여 미래에 받을 보상보다 현재의 보상에 더욱 비중을 두었다.
+  - step이 지날수록 받는 보상에 discount factor(γ)가 추가적으로 곱해진다(작아진다)
+  - γ∈[0,1)
+- Discounted Reward에 관해서는 다음 강의에서 자세히 알아볼 예정이다.
+- **핵심!(오개념 주의)**
+  - **앞으로 받게 될 총 보상**의 기댓값이라는 것에 유의하자
+    - Discounted Reward는 1개의 Episode에 대하여 discount factor(γ)의 개념을 도입하여 Reward의 합을 구한것이다.
+    - Value Function은 **이러한 합의 기댓값**이다.
+  - Value Function은 policy의 확률적인 영향뿐만 아니라 Environment의 확률적인 영향도 받는다.
+    - 배가 앞으로 이동할 때 바람이 이 배를 추가로 이동시켰다면 보상은 달라질 것이다. Value Function은 이러한 영향까지 모두 고려한 수치이다. 
+
+------
+
+### Model
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-29.jpg){: width="90%" height="90%"}{: .align-center} 
+
+Model은 다음 Environment를 예측한다.
+
+즉 다음과 같은 일을 수행한다.
+
+- Environment의 State(t)와 자신의 Action에 대한 다음 Environment의 State(t+1)를 예측
+- Environment의 State(t)와 자신의 Action에 대한 Environment의 Reward(t)를 예측
+
+Model이 있는 RL을 Model-Based Learning이라 하고 
+
+Model이 없는 RL을 Model-Free Learning이라 한다.
+
+------
+
+### Maze Example(Example of  Model)
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-30.jpg){: width="90%" height="90%"}{: .align-center} 
+
+1 step 마다 N,E,S,W 중 1칸을 움직이는 Action을 한다.
+
+1 step 마다 -1의 Reward를 받는다.
+
+------
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-31.jpg){: width="90%" height="90%"}{: .align-center} 
+
+각각의 State에 따라 policy를 표현한 것이다.(아마 optimal policy를 말하는 듯 하다)
+
+------
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-32.jpg){: width="90%" height="90%"}{: .align-center} 
+
+discount factor(γ) = 1인 상황 즉 Discounted Reward의 개념이 도입되지 않은 Value Function이다.
+
+------
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-33.jpg){: width="90%" height="90%"}{: .align-center} 
+
+**중요**
+
+- 다음은 Maze에서 Learning한 Agent의 Model을 나타낸 것이다.
+- **각 칸마다 -1이 쓰여있는 것을 볼 수 있다**: 1 step마다 보상을 -1로 예측하고 있다
+- 위의 미로의 모습이 Model이 Maze(Environment State)를 예측한 것이다
+  - **원래 미로의 모습과 다르다**: Agent가 가보지 않은 State는 Model에 포함되지 않는다. 즉 위의 그림이 Agent가 생각하는 Maze의 모습이다.
+
+------
+
+### Categorizing RL agents(1)
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-34.jpg){: width="90%" height="90%"}{: .align-center} 
+
+Agent의 구성에 따라 크게 3가지로 나눌 수 있다. 
+
+- Value Based
+  - No Policy, Only Value Function
+  - Q. Policy가 없는 데 Value Function이 어떻게 정의되나요? Policy를 따라 움직인 경로에서 Reward의 합을 구해야 Value Function이 정의되는 것 아닌가요?
+  - A. 대부분의 Value - Based RL은 Value Function을 Policy로써 사용합니다. 즉 Value Based를 통해 최적경로를 탐색합니다.
+- Policy Based
+  - No Value Function, Only Policy
+- Actor Critic
+  - Policy와 Value Function 둘다 존재
+
+------
+
+Categorizing RL agents(2)
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-35.jpg){: width="90%" height="90%"}{: .align-center} 
+
+- Model Free: Model 없음
+- Model Based: Model 존재
+
+------
+
+RL Agent Taxonomy
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-36.jpg){: width="90%" height="90%"}{: .align-center} 
+
+------
+
+### Learning and Planning
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-37.jpg){: width="90%" height="90%"}{: .align-center} 
+
+**Reinforcement Learning**: Environment를 알지 못한채 학습
+
+- Agent가 Environment와 interact(상호작용)하고 policy를 improves 시킴
+
+**Planning**: Environment를 완벽히 알고 학습 / 모델이 완벽함
+
+- 외적인 상호작용 없이 Model을 통해 Agent는 policy를 학습시킴
+- 단어 그대로 "Planning"
+
+------
+
+### Atari Example
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-38.jpg){: width="90%" height="90%"}{: .align-center} 
+
+**Reinforcement Learning**의 관점에서 Atari Game을 분석하며 지금까지 내용을 정리하자
+
+**Atari Game**: Model 완벽 X
+
+- Agent: 게임을 하는 사람
+- Environment: 게임기
+- Reward: 점수
+- Observation: 게임기 화면
+- Action: 조이스틱 움직임
+- Agent State: 점수, 적들과의 거리, 적들의 수 등 (Agent가 정하기 나름)
+- Environment State: 적들의 위치, 조이스틱의 움직임, 등 게임기의 모든 데이터
+- Model: 적들의 위치 예측, 적에 따른 주는 점수 예측, 화면 밖으로 이동이 불가한걸 알음, 등 사람이 하는 다양한 예측이 모두 Model에 의한 예측임
+
+------
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-39.jpg){: width="90%" height="90%"}{: .align-center} 
+
+**Planning**의 관점에서 Atari Game을 분석하자
+
+**Atari Game**: Model이 완벽
+
+- 그럴리는 없겠지만 머리속으로 게임을 구동할 수 있는 사람이 있다고 가정하자
+- 그 사람은 적들이 어디로 움직일지 화면이 어떻게 변할지 미리 완벽하게 예상할 수 있다.
+- 이럴때는 다음과 같이 tree search로 학습이 가능하다.
+  - 모든 경우에 대하여 받는 점수(Reward)를 완벽하게 예측이 가능하므로 가장 최적의 경로를 tree search로 찾는것이 가능한 것이다.
+
+------
+
+### Exploaration and Exploitation
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-40.jpg){: width="90%" height="90%"}{: .align-center} 
+
+- Agent는 시행착오의 방법으로 good policy를 발견해야한다.
+- Environment에서의 experience으로부터
+- 너무 많은 reward를 잃지 않는 방법으로
+
+------
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-41.jpg){: width="90%" height="90%"}{: .align-center} 
+
+**Exploration**: 이미 있는 방법에 머물지 않고 지속적으로 더 좋은 방법을 찾음
+
+**Exploitation**: 찾아낸 방법을 반복함으로써 Reward를 극대화 시킨다
+
+Explore가 Exploit보다 대체적으로 중요하다
+
+- Explore가 중요할 때가 많이 있지만 몇몇 상황에서는 Explore가 도움이 되지 않을 수 도 있다.
+
+------
+
+Examples of Exploration and Exploitation
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-42.jpg){: width="90%" height="90%"}{: .align-center} 
+
+------
+
+Prediction and Control
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-43.jpg){: width="90%" height="90%"}{: .align-center} 
+
+**중요**
+
+**Prediction**: 미래(Reward)를 평가 / Policy가 주어짐
+
+**Prediction Problem**: Value Function을 학습시키는 문제
+
+**Control**: 미래(Reward)를 최적화
+
+**Control Problem**: best Policy를 찾음
+
+------
+
+Gridworld Example
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-44.jpg){: width="90%" height="90%"}{: .align-center} 
+
+Prediction Problem이므로 Policy로부터 Value Function을 구해야 한다.
+
+**상황설명** 
+
+- Agent는 각 State에서 랜덤으로 움직인다
+- Agent가 A에 도달하면 A'으로 이동하며 보상 +10을 얻는다
+- Agent가 B에 도달하면 B'으로 이동하며 보상 +5를 얻는다
+- Agent는 1 step마다 음의 reward를 받는다
+
+이때 각각 Value Function은 다음과 같이 표현된다
+
+**오개념 주의!**
+
+- 다음의 Value Function을 Agent가 State에 도달할때 **받는** Reward로 생각하면 안된다.
+- 바로 받는 Reward가 아니라 앞으로 받을 Reward의 Discounted 합의 기댓값이다.
+- Value Function은 Discounted Reward의 Expection값임을 항상 기억하자.
+
+------
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-45.jpg){: width="90%" height="90%"}{: .align-center} 
+
+Control Problem이므로 최적의 Policy를 구해야 한다.
+
+최적의 Policy는 가장 오른쪽 그림과 같다.
+
+Optipma Policy, Optimal Value Function을 표현할 때에는 오른쪽 아래에 *를 붙인다.
+
+Optimal Value Function의 표기가 약간 헷갈릴 수 있는데  V *라는 것은 Policy *에 대한 Value Function이라는 뜻이다.
+
+------
+
+Course Outline
+
+![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-46.jpg){: width="90%" height="90%"}{: .align-center} 
+
+------
+
+***End***
+
