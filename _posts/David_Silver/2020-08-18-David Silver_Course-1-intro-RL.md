@@ -364,8 +364,6 @@ Agent의 구성에 따라 크게 3가지로 나눌 수 있다.
 
 ------
 
-### Categorizing RL agents(2)
-
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-35.jpg){: width="90%" height="90%"}{: .align-center} 
 
 - Model Free: Model 없음
