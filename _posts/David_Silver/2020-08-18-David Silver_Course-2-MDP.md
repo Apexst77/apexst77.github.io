@@ -5,6 +5,7 @@ tags: "Reinforcement_Learning"
 permalink: /RL/David_Silver/2/
 excerpt: "Course Review"
 changefreq : day
+use_math: true
 ---
 
 ## RL Course by David Silver : MDP

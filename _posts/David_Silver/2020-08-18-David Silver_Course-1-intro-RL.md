@@ -6,6 +6,7 @@ toc_sticky: False
 permalink: /RL/David_Silver/1/
 excerpt: "Course Review"
 changefreq : day
+use_math: true
 ---
 
 ## RL Course by David Silver : intro-RL
@@ -79,7 +80,7 @@ changefreq : day
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-13.jpg){: width="90%" height="90%"}{: .align-center} 
 
-R(t)는 Step t에서 얼마나 Agent가 잘 행동하고있는지를 나타낸다. Agent의 목적은 **Reward를 Maximize하는 것**이다.
+$R_t$는 Step t에서 얼마나 Agent가 잘 행동하고있는지를 나타낸다. Agent의 목적은 **Reward를 Maximize하는 것**이다.
 
 Reward는 반드시 **Scalar**값이어야 한다.(Vector인자는 학습이 불가하다)
 
@@ -128,14 +129,14 @@ Reward는 **지연**될 수 있다: 지금의 Action이 바로 Reward에 영향�
 
 - **Agent**
   - 다음 그림에서 뇌를 의미한다
-  - **Action(A(t))**을 하는 주체
-  - O(t), R(t)를 받아 A(t)를 행동한다
+  - **Action($A_t$)**을 하는 주체
+  - $O_t$, $R_t$를 받아 $A_t$를 행동한다
 
 - **Environment**
 
   - 다음 그림에서 외부의 환경(지구)을 의미한다
-  - Agent에게 **Observation(O(t))**과 **Reward(R(t))**를 준다
-  - A(t)를 받아 O(t+1), R(t+1)을 Agent에게 전달한다
+  - Agent에게 **Observation($O_t$)**과 **Reward($R_t$)**를 준다
+  - $A_t$를 받아 O<sub>t+1</sub>, R<sub>t+1</sub>을 Agent에게 전달한다
 
 ------
 
@@ -154,7 +155,7 @@ Reward는 **지연**될 수 있다: 지금의 Action이 바로 Reward에 영향�
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-19.jpg){: width="90%" height="90%"}{: .align-center} 
 
-**Environment State**: Step t에서 Environment가 O(t+1)과 R(t+1)을 pick할 때 이용한다.
+**Environment State**: Step t에서 Environment가 O<sub>t+1</sub>과 R<sub>t+1</sub>을 pick할 때 이용한다.
 
 - Agent는 대부분 Environment State를 보지 못한다.
 - Agent가 Environment State를 보더라도, irrelevant(관계없는) information를 포함하고 있다.
@@ -166,7 +167,7 @@ Reward는 **지연**될 수 있다: 지금의 Action이 바로 Reward에 영향�
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-20.jpg){: width="90%" height="90%"}{: .align-center} 
 
-**Agent State**: Step t에서 Agent가 A(t)을 pick할 때 이용한다.
+**Agent State**: Step t에서 Agent가 $A_t$을 pick할 때 이용한다.
 
 - Agent State는 History의 함수이다.
 - Environment가 전달한 Observation의 일부 또는 전체가 Agent State에 포함된다.
@@ -185,10 +186,10 @@ Reward는 **지연**될 수 있다: 지금의 Action이 바로 Reward에 영향�
   - 이게 의미하는 것은 위 PPT의 두 수식으로 이해할 수 있다.
   - Definition의  수식이 의미하는 것은 다음과 같다.
     - P[ ] 가 의미하는 것은 Probability(확률)이다
-    - S(t)를 참고하여 S(t+1)로 State가 전이될 확률은 S(1:t)까지 State를 참고하여 S(t+1)로 State가 전이될 확률과 같다.
-    - 즉 S(t)가 S(1:t)를 대표할만큼 충분한 information을 포함한다는 의미이다.
+    - $S_t$를 참고하여 S<sub>t+1</sub>로 State가 전이될 확률은 S(1:t)까지 State를 참고하여 S<sub>t+1</sub>로 State가 전이될 확률과 같다.
+    - 즉 $S_t$가 S(1:t)를 대표할만큼 충분한 information을 포함한다는 의미이다.
   - 아래 수식이 의미하는 것은 다음과 같다.
-    - Step t에 대하여 H(1:t)의 information을 S(t)가 대표하며 Only S(t)에 의존하여 (t+1) Step이후의 History가 모두 결정된다.
+    - Step t에 대하여 H(1:t)의 information을 $S_t$가 대표하며 Only $S_t$에 의존하여 (t+1) Step이후의 History가 모두 결정된다.
 
 Environment State와 History는 Definition에 의해 Markov State임이 자명하다.
 
@@ -306,8 +307,8 @@ Model은 다음 Environment를 예측한다.
 
 즉 다음과 같은 일을 수행한다.
 
-- Environment의 State(t)와 자신의 Action에 대한 다음 Environment의 State(t+1)를 예측
-- Environment의 State(t)와 자신의 Action에 대한 Environment의 Reward(t)를 예측
+- Environment의 $State_t$와 자신의 Action에 대한 다음 Environment의 State<sub>t+1</sub>를 예측
+- Environment의 $State_t$와 자신의 Action에 대한 Environment의 $Reward_t$를 예측
 
 Model이 있는 RL을 Model-Based Learning이라 하고 
 
