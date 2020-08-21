@@ -36,6 +36,12 @@ use_math: true
 
 ------
 
+**Contents**
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-02.jpg){: width="90%" height="90%"}{: .align-center}
+
+------
+
 ### Machine Learning
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-06.jpg){: width="90%" height="90%"}{: .align-center}
