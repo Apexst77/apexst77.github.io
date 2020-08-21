@@ -10,7 +10,7 @@ use_math: true
 
 ## RL Course by David Silver : MDP
 
-![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-01.jpg){: width="90%" height="90%"}{: .align-center}
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-01.jpg){: width="90%" height="90%"}{: .align-center}
 
 Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#reinforcement-learning) - RL Course:David Silver 
 
@@ -29,6 +29,10 @@ Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#rei
 ***
 
 중요 단어는 모두 영어로 기록할 예정입니다.
+
+------
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-02.jpg){: width="90%" height="90%"}{: .align-center}
 
 ------
 
