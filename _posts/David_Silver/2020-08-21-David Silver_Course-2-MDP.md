@@ -32,7 +32,414 @@ Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#rei
 
 ------
 
+**Lecture Contents**
+
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-02.jpg){: width="90%" height="90%"}{: .align-center}
 
 ------
 
+### Introduction to MDPs
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Markov Property
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-04.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### State Transition Matrix
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-05.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Markov Process
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-06.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: Student Markov Chain
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: Student Markov Chain Episodes
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: Student Markov Chain Transition Matrix
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: Student MRP
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Return
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Why discount?
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Value Function
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: Student MRP Returns
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: State-Value Function for Student MRP
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Bellman Equeation for MRPs
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: Bellman Equation for Student MRP
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Bellman Equation in Matrix Form
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Solving the Bellman Equation
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Markov Decision Process
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: Student MDP
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Policies
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-26.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-27.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Value Function
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-28.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: State-Value for Student MDP
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-29.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Bellman Expectation Equation
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-30.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-31.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-32.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-33.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-34.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: Bellman Expectation Equation in Student MDP
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-35.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Bellman Expectation Equation (Matrix Form)
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-36.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Optimal Value Function
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-37.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: Optimal Value Function for Student MDP
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-38.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: Optimal Action-Value Function for Student MDP
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-39.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Optimal Policy
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-40.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Finding an Optimal Policy
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-41.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: Optimal Policy for Student MDP
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-42.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Bellman Optimality Equation
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-43.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-44.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-45.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-46.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Example: Bellman Optimality Equation in Student MDP
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-47.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Solving the Bellman Optimality Equation
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-48.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Extensions to MDPs
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-49.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Infinite MDPs
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-50.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### POMDPs
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-51.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Belief States 
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-52.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Reductions of POMDPs
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-53.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Ergodic Markov Process
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-54.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Ergodic MDP
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-55.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Average Reward Value Function
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-56.jpg){: width="90%" height="90%"}{: .align-center}
+
+
+
+------
+
+### Question
+
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-57.jpg){: width="90%" height="90%"}{: .align-center}
