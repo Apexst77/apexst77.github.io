@@ -42,7 +42,14 @@ Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#rei
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
 
+**MDP**: Markov Decision Process 
 
+MDP는 일반적으로 Reinforcement Learning의 Environment를 묘사한다.
+
+**Lecture_1 복습**
+
+- MDP는 Environment가 fully observation한 상태
+- Observation = Agent State = Environment State
 
 ------
 
@@ -50,7 +57,9 @@ Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#rei
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-04.jpg){: width="90%" height="90%"}{: .align-center}
 
+Lecture1 에서 **Markov State**의 개념과 동일
 
+다음 State에 영향을 주는 것은 바로전 State 뿐이다
 
 ------
 
@@ -58,7 +67,9 @@ Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#rei
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-05.jpg){: width="90%" height="90%"}{: .align-center}
 
+Markov state s에서 s'으로 이동할 확률들의 테이블
 
+기본적으로 Pss'으로 표현하며 Pss'이란 s에서 Agent가 s'으로 이동할 확률을 의미한다.
 
 ------
 
@@ -72,7 +83,7 @@ Category : [[Reinforcement Learning]](https://apexst77.github.io/categories/#rei
 
 ### Example: Student Markov Chain
 
-![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-03.jpg){: width="90%" height="90%"}{: .align-center}
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-07.jpg){: width="90%" height="90%"}{: .align-center}
 
 
 
