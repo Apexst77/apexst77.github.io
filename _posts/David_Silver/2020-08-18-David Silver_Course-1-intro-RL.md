@@ -34,6 +34,8 @@ use_math: true
 
 중요 단어는 모두 영어로 기록할 예정입니다.
 
+ppt의 출처는 모두 David Silver 교수님의 Lecture임을 밝힙니다.
+
 ------
 
 **Lecture Contents**
@@ -355,7 +357,7 @@ discount factor(γ) = 1인 상황 즉 Discounted Reward의 개념이 도입되�
 
 ------
 
-### Categorizing RL agents(1)
+### Categorizing RL agents
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-34.jpg){: width="90%" height="90%"}{: .align-center} 
 
@@ -421,7 +423,7 @@ Agent의 구성에 따라 크게 3가지로 나눌 수 있다.
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-39.jpg){: width="90%" height="90%"}{: .align-center} 
 
-**Planning**의 관점에서 Atari Game을 분석하자
+**Planning**의 관점에서 Atari Game을 분석하며 지금까지 내용을 정리하자
 
 **Atari Game**: Model이 완벽
 
@@ -476,7 +478,7 @@ Explore가 Exploit보다 대체적으로 중요하다
 
 ------
 
-### Gridworld Example
+### Gridworld Example: Prediction
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-44.jpg){: width="90%" height="90%"}{: .align-center} 
 
@@ -499,9 +501,11 @@ Prediction Problem이므로 Policy로부터 Value Function을 구해야 한다.
 
 ------
 
+### Gridworld Example: Control
+
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-45.jpg){: width="90%" height="90%"}{: .align-center} 
 
-Control Problem이므로 최적의 Policy를 구해야 한다.
+다음은 **Control Problem**이므로 최적의 Policy를 구해야 한다.
 
 최적의 Policy는 가장 오른쪽 그림과 같다.
 
