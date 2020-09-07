@@ -114,7 +114,7 @@ Sample **episodes** (start : S1 = Class_1)
 
 Sleep is Terminal State(종결 State)(상태를 유지할 확률이 1)
 
-Sleep에 도달할 때까지 우리가 거쳐간 State의 Sequence 1개를 Sampling된 episode라고 한다.
+Sleep에 도달할 때까지 거쳐간 State의 Sequence 1개를 Sampling된 episode라고 한다.
 
 Ex
 
@@ -387,7 +387,7 @@ Reward Sequence의 경우는 **Markov reward process <S,$P^{\pi\}$,$R^{\pi\}$,γ
 
 ------
 
-### Bellman Expectation Equation
+### Bellman Expectation Equation for $V_*$
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-30.jpg){: width="90%" height="90%"}{: .align-center}
 
@@ -397,17 +397,23 @@ Reward Sequence의 경우는 **Markov reward process <S,$P^{\pi\}$,$R^{\pi\}$,γ
 
 ------
 
+### Bellman Expectation Equation for $Q_*$
+
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-31.jpg){: width="90%" height="90%"}{: .align-center}
 
 **state-value function을 action-value function을 통해 표현**하면 다음과 같다.(=식 a)
 
 ------
 
+### Bellman Expectation Equation for $V_*$ (2)
+
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-32.jpg){: width="90%" height="90%"}{: .align-center}
 
 **action-value function을 state-value function을 통해 표현**하면 다음과 같다.(=식 b)
 
 ------
+
+### Bellman Expectation Equation for $Q_*$ (2)
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-33.jpg){: width="90%" height="90%"}{: .align-center}
 
@@ -447,7 +453,9 @@ Bellman Expectation Equation을 **행렬**로 표현하면 다음과 같이 표�
 
 **Optimal Value function은 $v_*$로 표현**된다.
 
-$v_*$는 
+**$v_*$**는 여러개의 **정책 $\pi\$** 에 대하여 최대(max)의 **state_value function** 이며
+
+**$q_*$**는 여러개의 **정책 $\pi\$** 에 대하여 최대(max)의 **action_value function** 이다.
 
 ------
 
@@ -455,7 +463,9 @@ $v_*$는
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-38.jpg){: width="90%" height="90%"}{: .align-center}
 
+**Student MDP**에서 최적의 정책에 대하여 **$v_*$**를 표현한 것이다.
 
+당연하게도 **$v_*$가 커지는 State(최적의 정책)**를 따라갈시 계속해서 공부하여 시험에 패스하는 것이 최적의 정책이다.
 
 ------
 
@@ -463,7 +473,9 @@ $v_*$는
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-39.jpg){: width="90%" height="90%"}{: .align-center}
 
+**Student MDP**에서 최적의 정책에 대하여 **$q_*$**를 표현한 것이다.
 
+당연하게도 **$q_*$가 가장 큰 Action(최적의 정책)**을 따라갈시 계속해서 공부하여 시험에 패스하는 것이 최적의 정책이다.
 
 ------
 
@@ -471,7 +483,22 @@ $v_*$는
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-40.jpg){: width="90%" height="90%"}{: .align-center}
 
+정책 사이의 **부분 순서**를 다음과 같이 정의하자
 
+- 만약 정책 $\pi\$ 와 $\pi\'$에 대하여 각 Agent가 정책을 따라갈 때
+
+- **모든 State에 대하여 $V_{\pi\}(s) >= V_{\pi\'}(s)$ 가 성립할 경우 $\pi\ >= \pi\'$ 가 성립**한다.
+
+또한 **최적의 정책 $\pi\_*$**에 대해 다음과 같이 정의하자.
+
+- 다른 모든 정책에 대해 각 State의 state-value function이 항상 더 클 경우 이 정책을 **optimal policy**라고 정의하자.
+
+**중요)** 이때 다음 이론이 성립한다.(증명되었다)
+
+- For any MDP(**모든 MDP**에 대하여)
+- **최적의 정책** $\pi_{*}$은 언제나 존재한다.
+- 최적의 정책 $\pi_\*{(s,a)}$에 의한 state-value function은 언제나 $V_*(s)$와 같다.
+-  최적의 정책 $\pi_\*{(s,a)}$에 의한 action-value function은 언제나 $q_*(s,a)$와 같다.
 
 ------
 
@@ -479,7 +506,9 @@ $v_*$는
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-41.jpg){: width="90%" height="90%"}{: .align-center}
 
+만약 **$q_*(s,a)$**를 알고 있다면 반대로 **optimal policy**가 결정된다.
 
+**최적의 정책**은 언제나 **$q_{*}(s,a)$**가 가장 큰 **Action**을 선택함으로써 구할 수 있다.
 
 ------
 
@@ -487,33 +516,39 @@ $v_*$는
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-42.jpg){: width="90%" height="90%"}{: .align-center}
 
-
+**$q_*(s,a)$**가 가장 큰 **Action**을 선택하면 다음과 같은 **빨간색 경로(optimal policy)**가 구해지게 된다.
 
 ------
 
-### Bellman Optimality Equation
+### Bellman Optimality Equation for $V_*$
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-43.jpg){: width="90%" height="90%"}{: .align-center}
 
-
+$V_\*(s)$는 모든 Action에 대하여 $q_\*(s,a)$의 최대와 같다. (식 -1)
 
 ------
+
+### Bellman Optimality Equation for $Q_*$
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-44.jpg){: width="90%" height="90%"}{: .align-center}
 
-
+$q_\*(s,a)$는 **immediate Reward**와 **Action에 의해 파생 가능한 모든 State s'에 대하여 $v_\*(s')$의 기대값**의 합으로 표현 가능하다. (식 -2)
 
 ------
+
+### Bellman Optimality Equation for $V_*$ (2)
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-45.jpg){: width="90%" height="90%"}{: .align-center}
 
-
+식-1에 식-2를 대입하면 다음과 같다.
 
 ------
 
+### Bellman Optimality Equation for $Q_*$ (2)
+
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-46.jpg){: width="90%" height="90%"}{: .align-center}
 
-
+식-2에 식-1를 대입하면 다음과 같다.
 
 ------
 
@@ -521,7 +556,9 @@ $v_*$는
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-47.jpg){: width="90%" height="90%"}{: .align-center}
 
+ 다음의 **Student MDP**에서 다음 식이 성립함을 확인할 수 있다.
 
+- 6은 (-2+8)과 (-1+6) 중 큰 값을 고른것이다.
 
 ------
 
@@ -529,15 +566,19 @@ $v_*$는
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-48.jpg){: width="90%" height="90%"}{: .align-center}
 
+Bellman Optimality Equation은 linear(선형적)이지 않다.
 
+- 식에 **max함수**가 들어가 있기 때문이다.
+- 따라서 closed form 방법이 존재X(일반적인 경우에는)
+- 이것을 해결하기 위한 다양한 방법이 존재한다.
 
 ------
+
+<아래부터는 추후 공부 예정>
 
 ### Extensions to MDPs
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-49.jpg){: width="90%" height="90%"}{: .align-center}
-
-
 
 ------
 
@@ -545,15 +586,11 @@ $v_*$는
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-50.jpg){: width="90%" height="90%"}{: .align-center}
 
-
-
 ------
 
 ### POMDPs
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-51.jpg){: width="90%" height="90%"}{: .align-center}
-
-
 
 ------
 
@@ -561,15 +598,11 @@ $v_*$는
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-52.jpg){: width="90%" height="90%"}{: .align-center}
 
-
-
 ------
 
 ### Reductions of POMDPs
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-53.jpg){: width="90%" height="90%"}{: .align-center}
-
-
 
 ------
 
@@ -577,15 +610,11 @@ $v_*$는
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-54.jpg){: width="90%" height="90%"}{: .align-center}
 
-
-
 ------
 
 ### Ergodic MDP
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-55.jpg){: width="90%" height="90%"}{: .align-center}
-
-
 
 ------
 
@@ -593,10 +622,14 @@ $v_*$는
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-56.jpg){: width="90%" height="90%"}{: .align-center}
 
-
-
 ------
 
 ### Question
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-57.jpg){: width="90%" height="90%"}{: .align-center}
+
+------
+
+질문 및 피드백은 환영합니다
+
+***End***
