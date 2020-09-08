@@ -634,6 +634,4 @@ Bellman Optimality Equation은 linear(선형적)이지 않다.
 
 ------
 
-질문 및 피드백은 환영합니다
-
-***End***
+**질문 및 피드백은 환영합니다**
