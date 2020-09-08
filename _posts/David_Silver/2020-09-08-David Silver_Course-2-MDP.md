@@ -576,7 +576,9 @@ Bellman Optimality Equation은 linear(선형적)이지 않다.
 
 ------
 
-<아래부터는 추후 공부 예정>
+**아래부터는 추후 공부 예정**
+
+---
 
 ### Extensions to MDPs
 
