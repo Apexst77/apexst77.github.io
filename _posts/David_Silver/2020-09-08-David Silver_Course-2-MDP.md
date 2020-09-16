@@ -397,35 +397,35 @@ Reward Sequence의 경우는 **Markov reward process <S,$P^{\pi\}$,$R^{\pi\}$,γ
 
 ------
 
-### Bellman Expectation Equation for $V_*$
+### Bellman Expectation Equation for $V_{\pi}$
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-31.jpg){: width="90%" height="90%"}{: .align-center}
 
-**state-value function을 action-value function을 통해 표현**하면 다음과 같다.(=식 a)
+**state-value function을 action-value function을 통해 표현**하면 다음과 같다.(식 -1)
 
 ------
 
-### Bellman Expectation Equation for $Q_*$
+### Bellman Expectation Equation for $Q_{\pi}$
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-32.jpg){: width="90%" height="90%"}{: .align-center}
 
-**action-value function을 state-value function을 통해 표현**하면 다음과 같다.(=식 b)
+**action-value function을 state-value function을 통해 표현**하면 다음과 같다.(식 -2)
 
 ------
 
-### Bellman Expectation Equation for $V_*$ (2)
+### Bellman Expectation Equation for $V_{\pi}$ (2)
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-33.jpg){: width="90%" height="90%"}{: .align-center}
 
-**a 식에 b 식을 대입**하면 다음과 같은 식을 얻을 수 있다. 
+**식 -1에 식-2를 대입**하면 다음과 같은 식을 얻을 수 있다. 
 
 ------
 
-### Bellman Expectation Equation for $Q_*$ (2)
+### Bellman Expectation Equation for $Q_{\pi}$ (2)
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-34.jpg){: width="90%" height="90%"}{: .align-center}
 
-**b 식에 a 식을 대입**하면 다음과 같은 식을 얻을 수 있다. 
+**식 -2에 식 -1을 대입**하면 다음과 같은 식을 얻을 수 있다. 
 
 ------
 
