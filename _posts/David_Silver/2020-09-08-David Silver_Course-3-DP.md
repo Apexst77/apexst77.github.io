@@ -5,6 +5,7 @@ tags: "Reinforcement_Learning"
 permalink: /RL/David_Silver/3/
 excerpt: "Course Review"
 changefreq : day
+use_math: true
 ---
 
 ## RL Course by David Silver : intro-RL
@@ -123,7 +124,7 @@ Using **synchronous backups**:
 다음 식의 의미를 살펴보면:
 
 - **Step k, State s**에서
-- **모든 Action**에 대하여 더한다
+- **모든 Action**에 대하여
 - State s에서 **정책 $\pi$에 의해 Action a가 선택될 확률**과
 - [**immediate Reward** + Action에 의해 파생되는 모든 **State s'에 대하여** **discounted factor에 의해 가감된 Value Function의 기댓값**] 의 곱을 더한다.
 - 즉 State s에서 Policy에 대하여 [**immediate Reward** + Action에 의해 파생되는 모든 **State s'에 대하여** **discounted factor에 의해 가감된 Value Function의 기댓값**]의 기댓값을 구한다.
@@ -386,7 +387,7 @@ s를 통해 또한 s 이전 step State의 **$v_{\*}$**를 구할 수 있다
 
 ### Example: Shortest Path
 
-![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/3/DP-20.jpg){: width="90%" height="90%"}{: .align-center}
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/3/DP-22.jpg){: width="90%" height="90%"}{: .align-center}
 
 다음은 
 
@@ -394,7 +395,7 @@ s를 통해 또한 s 이전 step State의 **$v_{\*}$**를 구할 수 있다
 
 ### Iterative Policy Evaluation in Small Gridworld
 
-![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/3/DP-20.jpg){: width="90%" height="90%"}{: .align-center}
+![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/3/DP-23.jpg){: width="90%" height="90%"}{: .align-center}
 
 
 
