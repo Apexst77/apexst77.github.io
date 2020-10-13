@@ -3,6 +3,7 @@ title: "[Algorithm]Sort Algorithm by Python"
 categories: "Algorithm"
 tags: "python"
 toc_sticky: True
+excerpt: "Sort Algorithm"
 permalink: /Algorithm/Sort/
 changefreq : day
 use_math: true
