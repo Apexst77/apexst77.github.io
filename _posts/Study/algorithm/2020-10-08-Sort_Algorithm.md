@@ -4,7 +4,6 @@ categories: "Algorithm"
 tags: "python"
 toc_sticky: True
 permalink: /Algorithm/Sort/
-excerpt: "Course Review"
 changefreq : day
 use_math: true
 ---
