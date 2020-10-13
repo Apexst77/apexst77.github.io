@@ -1,7 +1,7 @@
 ---
 title: "[RL]David Silver_RL-Lecture-1:intro-RL"
-categories: "David_Silver"
-tags: "Reinforcement_Learning"
+categories: "Reinforcement_Learning"
+tags: "David_Silver"
 toc_sticky: False
 permalink: /RL/David_Silver/1/
 excerpt: "Course Review"
@@ -518,8 +518,4 @@ Optimal Value Function의 표기가 약간 헷갈릴 수 있는데  V *라는 �
 ### Course Outline
 
 ![-]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-46.jpg){: width="90%" height="90%"}{: .align-center} 
-
-------
-
-**질문 및 피드백은 환영합니다**
 

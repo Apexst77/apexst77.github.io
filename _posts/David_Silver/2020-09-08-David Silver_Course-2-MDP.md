@@ -1,7 +1,7 @@
 ---
 title: "[RL]David Silver_RL-Course-2:MDP"
-categories: "David_Silver"
-tags: "Reinforcement_Learning"
+categories: "Reinforcement_Learning"
+tags: "David_Silver"
 permalink: /RL/David_Silver/2/
 excerpt: "Course Review"
 changefreq : day
@@ -631,7 +631,3 @@ Bellman Optimality Equation은 linear(선형적)이지 않다.
 ### Question
 
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/2/MDP-57.jpg){: width="90%" height="90%"}{: .align-center}
-
-------
-
-**질문 및 피드백은 환영합니다**

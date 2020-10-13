@@ -1,7 +1,7 @@
 ---
 title: "[RL]David Silver_RL-Course-3:DP"
-categories: "David_Silver"
-tags: "Reinforcement_Learning"
+categories: "Reinforcement_Learning"
+tags: "David_Silver"
 permalink: /RL/David_Silver/3/
 excerpt: "Course Review"
 changefreq : day
