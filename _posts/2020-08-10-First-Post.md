@@ -1,7 +1,8 @@
 ---
 title: "First, Post!"
 comments: true
-changefreq : day
+categories: "etc"
+changefreq : month
 permalink: /First/
 ---
 
