@@ -14,7 +14,7 @@ use_math: true
 ![T]({{ site.url }}{{ site.baseurl }}/assets/images/David_Silver/1/intro_RL-01.jpg){: width="90%" height="90%"}{: .align-center}
 
 ***
-**Category :** [[Reinforcement Learning]](https://apexst77.github.io/categories/#reinforcement-learning) - RL Course:David Silver**
+**Category :** [[Reinforcement Learning]](https://apexst77.github.io/categories/#reinforcement-learning) - RL Course:David Silver
 
 - [0] [UCL Course on RL](https://www.davidsilver.uk/teaching/)
 - [1] [intro-RL](https://apexst77.github.io/RL/David_Silver/1/) : **this post**

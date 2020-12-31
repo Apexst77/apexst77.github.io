@@ -48,6 +48,7 @@ def QS(list_):
 - 리스트의 가장 앞인자를 Pivot으로 설정
 - 피봇보다 큰 값은 right, 작은 값은 left 리스트에 append
 - 재귀함수를 통해 반복(종결 조건 len_list <= 1)(숫자가 1개 또는 0개)
+- 대부분의 경우에는 **O(n log n)**의 계산복잡도를 보인다
 
 ### 3.  Selection Sort
 
@@ -85,9 +86,24 @@ def IS(list_):
 ### 5. Shell Sort
 
 ```python
+def IS(list_):
+    for i in range(1, len(list_)):
+        j = i-1
+        while(j>=0 and list_[i]<list_[j]):
+            j-=1
+        list_.insert(j+1,list_[i])
+        del list_[i+1]
+    return list_
 
+def SHS(list_):
+    len_list = len(list_)
+    interval = len_list//2
+    while interval>=1:
+        for i in range(length):
+            
 ```
 
+- insertion Sort의 개선된 알고리즘이다
 - 
 
 ## O(n log n)
