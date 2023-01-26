@@ -83,4 +83,4 @@ Unsupervised learning은 Label 없는 Data에서 숨겨진 구조를 찾는다.
 
 [**Reinforcement Learning**](http://incompleteideas.net/book/the-book-2nd.html)
 
-[**단단한 강화학습 by JPub**] : 위 원서의 번역본입니다
+[**단단한 강화학습 by JPub**]
